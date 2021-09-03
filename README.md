@@ -13,28 +13,13 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 ## Features
 
-- [Vite](https://github.com/vitejs/vite) ⚡️, [Vue 3](https://github.com/vuejs/vue-next),
-- 💨 [Windi CSS](https://github.com/windicss/windicss)
-- 📦 [Components auto importing](./src/components)
-- [i18n](https://github.com/intlify/vue-i18n-next) out of the box 👩‍🎨
-- Easy to use svg icons based on [Iconify](https://iconify.design) 🔝
-- Routing with [Vue Router 4](https://github.com/vuejs/vue-router-next)
-- Deploy on Netlify
-
-<p align='center'><a href="https://vitesome.alvarosaburido.dev/"> Live Demo</a><p>
-
-## You can help me keep working on this project 💚
-
-- [Become a Sponsor on GitHub](https://github.com/sponsors/alvarosaburido)
-- [One-time donation via PayPal](https://paypal.me/alvarosaburido)
-
-<h4 align="center">Generous Unicorns 🦄</h4>
-
-<p align="center">
-  <a href="https://github.com/OmgImAlexis" target="_blank" rel="noopener noreferrer" ">
-    <img src="https://avatars.githubusercontent.com/u/6525926?v=4" height="72px"  style="border-radius: 100%; overflow: hidden; border: 4px solid #5EDCAE" alt="OmgImAlexis">
-  </a>
-</p>
+-  [Vite](https://github.com/vitejs/vite) ⚡️, [Vue 3](https://github.com/vuejs/vue-next),
+-  💨 [Windi CSS](https://github.com/windicss/windicss)
+-  📦 [Components auto importing](./src/components)
+-  [i18n](https://github.com/intlify/vue-i18n-next) out of the box 👩‍🎨
+-  Easy to use svg icons based on [Iconify](https://iconify.design) 🔝
+-  Routing with [Vue Router 4](https://github.com/vuejs/vue-router-next)
+-  Deploy on Netlify
 
 ## Pre-📦
 
@@ -42,26 +27,26 @@ This repo brings few things pre-packed, so you don't need to install them manual
 
 ### Styling
 
-- [Windi CSS](https://github.com/windicss/windicss) with [`vite-plugin-windicss`](https://github.com/windicss/vite-plugin-windicss)
-- Default [Google Fonts](https://github.com/stafyniaksacha/vite-plugin-fonts#readme) with `vite-plugin-fonts`
+-  [Windi CSS](https://github.com/windicss/windicss) with [`vite-plugin-windicss`](https://github.com/windicss/vite-plugin-windicss)
+-  Default [Google Fonts](https://github.com/stafyniaksacha/vite-plugin-fonts#readme) with `vite-plugin-fonts`
 
 ### Icons
 
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-  - [PurgeIcons](https://github.com/antfu/purge-icons) with [`vite-plugin-purge-icons](vite-plugin-purge-icons) Think about TailwindCSS + PurgeCSS, but for Icons.
-  - Custom icons below `./assets/icons` with
+-  [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
+   -  [PurgeIcons](https://github.com/antfu/purge-icons) with [`vite-plugin-purge-icons](vite-plugin-purge-icons) Think about TailwindCSS + PurgeCSS, but for Icons.
+   -  Custom icons below `./assets/icons` with
 
 ### Plugins
 
-- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs
-- [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization
-- Component auto-import with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)
+-  [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs
+-  [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization
+-  Component auto-import with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)
 
 ### Dev tools
 
-- [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - All in one i18n support
-- [Windi CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - IDE support for Windi CSS
-- [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Icon inline display and autocomplete
+-  [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - All in one i18n support
+-  [Windi CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - IDE support for Windi CSS
+-  [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Icon inline display and autocomplete
 
 ### Project setup
 
