@@ -1,15 +1,19 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, defineAsyncComponent, ref } from 'vue';
 import ItButton from 'library/components/button';
 import ItBadge from 'library/components/badge';
 import ItInput from 'library/components/input';
 
 export default defineComponent({
-   components: { ItButton, ItBadge, ItInput },
+   components: {
+      ItButton,
+      ItBadge,
+      ItInput,
+      Foo: defineAsyncComponent(() => import('./components/Foo').then(mod => mod.Foo)),
+   },
    name: 'App',
    setup(props) {
       let inputValue = ref('');
-
       return { inputValue };
    },
 });
@@ -53,6 +57,8 @@ export default defineComponent({
    <it-tooltip content="Right" placement="right">
       <it-button>Right</it-button>
    </it-tooltip>
+
+   <Foo />
    <router-view />
 </template>
 
