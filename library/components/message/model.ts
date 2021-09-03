@@ -1,4 +1,4 @@
-import { Colors } from '/@equal/models/enums'
+import { Colors } from 'library/models/enums'
 
 export const typeIcon: { [key in Colors]?: string } = {
   [Colors.PRIMARY]: 'info_outline',

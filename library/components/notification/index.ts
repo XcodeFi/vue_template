@@ -1,6 +1,6 @@
 import NotificationVue from './ItNotification.vue'
 import { createApp, ComponentPublicInstance } from 'vue'
-import { Colors, Positions } from '/@equal/models/enums'
+import { Colors, Positions } from 'library/models/enums'
 
 interface INotificationOptions {
   id: number | null
@@ -24,7 +24,7 @@ const notifications: ComponentPublicInstance[] = []
 
 let idStart = 0
 
-const Notification = (options: Partial<INotificationOptions> = { }) => {
+const Notification = (options: Partial<INotificationOptions> = {}) => {
   options.placement = options.placement || Positions.TR
   const onClose = options.onClose
   const id = idStart++

@@ -3,10 +3,10 @@ import App from './App.vue';
 import '@purge-icons/generated';
 import { createI18n } from 'vue-i18n';
 
-import ItNotification from '/@equal/components/notification';
-import ItProgressbar from '/@equal/components/progressbar';
-import ItTooltip from '/@equal/components/tooltip';
-import Loadingbar from '/@equal/components/loadingbar';
+import ItNotification from 'library/components/notification';
+import ItProgressbar from 'library/components/progressbar';
+import ItTooltip from 'library/components/tooltip';
+import Loadingbar from 'library/components/loadingbar';
 
 import './styles/base.less';
 

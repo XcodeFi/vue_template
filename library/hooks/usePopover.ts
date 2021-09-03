@@ -1,5 +1,5 @@
 import { ref, nextTick, computed, toRef } from 'vue'
-import { Positions } from '/@equal/models/enums'
+import { Positions } from 'library/models/enums'
 import { Ref } from 'vue'
 
 // REFACTOR HOOK

@@ -1,4 +1,4 @@
-import { Colors, Positions } from '/@equal/models/enums'
+import { Colors, Positions } from 'library/models/enums'
 
 export const ALLOWED_POSITIONS = [
   Positions.TL,
