@@ -7,11 +7,14 @@ import ViteComponents from 'vite-plugin-components';
 import PurgeIcons from 'vite-plugin-purge-icons';
 import ViteFonts from 'vite-plugin-fonts';
 import svgLoader from 'vite-svg-loader';
+const vueJsx = require('@vitejs/plugin-vue-jsx');
+
+// import viteSSR from 'vite-ssr/plugin.js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 4000,
+    port: 5000,
   },
   resolve: {
     alias: {
@@ -20,7 +23,10 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue(),
+    vueJsx(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     // https://github.com/jpkleemans/vite-svg-loader
     svgLoader(),
     // https://github.com/antfu/vite-plugin-components
@@ -48,5 +54,10 @@ export default defineConfig({
     VueI18n({
       include: [path.resolve(__dirname, './locales/**')],
     }),
+    // viteSSR(),
   ],
+  build: {
+    minify: true
+  }
 });
+

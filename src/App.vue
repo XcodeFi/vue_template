@@ -1,38 +1,28 @@
-<script lang="ts">
-import { defineComponent, defineAsyncComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref, getCurrentInstance } from 'vue';
 import ItButton from 'library/components/button';
 import ItBadge from 'library/components/badge';
 import ItInput from 'library/components/input';
+import Foo from './components/Foo';
 
-export default defineComponent({
-   components: {
-      ItButton,
-      ItBadge,
-      ItInput,
-      Foo: defineAsyncComponent(() => import('./components/Foo').then(mod => mod.Foo)),
-   },
-   name: 'App',
-   setup(props) {
-      let inputValue = ref('');
-      return { inputValue };
-   },
-});
+let inputValue = ref('');
+
+const app = getCurrentInstance();
+const globalProperties = app?.appContext.config.globalProperties;
+const $Notification = globalProperties?.$Notification;
+const $Loading = globalProperties?.$Loading;
 </script>
 <template>
+   <Foo></Foo>
    <!-- <it-progressbar infinite /> -->
    <div class="container mx-auto grid-rows-4 gap-2">
       <h3>Input</h3>
 
-      <it-input v-model="inputValue" type="date" suffix-icon="remove_red_eye" />
-      <it-input v-model="inputValue" type="datetime-local" prefix-icon="cloud_queue" />
-      <it-input
-         type="week"
-         v-model="inputValue"
-         suffix-icon="remove_red_eye"
-         prefix-icon="cloud_queue"
-      />
+      <it-input v-model="inputValue" type="date" />
+      <it-input v-model="inputValue" type="time" />
+      <it-input type="week" v-model="inputValue" />
    </div>
-   <it-button type="danger" size="small" class="!rounded-full">Button</it-button>
+   <it-button type="danger" size="small" round>Button</it-button>
    <it-button type="warning" size="small" round>Button</it-button>
    <it-button type="black" round>Button</it-button>
    <it-button @click="$Loading.start()">Start</it-button>
@@ -58,7 +48,6 @@ export default defineComponent({
       <it-button>Right</it-button>
    </it-tooltip>
 
-   <Foo />
    <router-view />
 </template>
 
