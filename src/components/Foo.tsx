@@ -5,6 +5,6 @@ import './foo.less'
 export default defineComponent({
   name: 'foo',
   setup() {
-    return () => <div class="jsx">from JSX 3232</div>
+    return () => <div class="jsx">from JSX 2</div>
   }
 })

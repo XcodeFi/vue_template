@@ -26,19 +26,19 @@ class Loading implements ILoading {
   }
 
   start() {
-    ;(this.loadEl.$data as ILoadingProps).start = true
-    ;(this.loadEl.$data as ILoadingProps).progress = 90
+    ; (this.loadEl.$data as ILoadingProps).start = true
+      ; (this.loadEl.$data as ILoadingProps).progress = 90
   }
 
   update(value: number) {
-    ;(this.loadEl.$data as ILoadingProps).start = false
-    ;(this.loadEl.$data as ILoadingProps).progress = value
+    ; (this.loadEl.$data as ILoadingProps).start = false
+      ; (this.loadEl.$data as ILoadingProps).progress = value
   }
 
   finish() {
-    ;(this.loadEl.$data as ILoadingProps).start = false
-    ;(this.loadEl.$data as ILoadingProps).progress = 100
-    ;(this.loadEl.$data as ILoadingProps).height = 0
+    ; (this.loadEl.$data as ILoadingProps).start = false
+      ; (this.loadEl.$data as ILoadingProps).progress = 100
+      ; (this.loadEl.$data as ILoadingProps).height = 0
   }
 }
 

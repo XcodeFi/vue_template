@@ -7,14 +7,24 @@ import Foo from './components/Foo';
 
 let inputValue = ref('');
 
+import { useHead } from '@vueuse/head';
+
+// https://github.com/vueuse/head
+// you can use this to manipulate the document head in any components,
+// they will be rendered correctly in the html results with vite-ssg
+useHead({
+   title: 'Vitesse',
+   meta: [{ name: 'description', content: 'Opinionated Vite Starter Template' }],
+});
+
 const app = getCurrentInstance();
 const globalProperties = app?.appContext.config.globalProperties;
 const $Notification = globalProperties?.$Notification;
 const $Loading = globalProperties?.$Loading;
 </script>
 <template>
+   <it-progressbar infinite />
    <Foo></Foo>
-   <!-- <it-progressbar infinite /> -->
    <div class="container mx-auto grid-rows-4 gap-2">
       <h3>Input</h3>
 

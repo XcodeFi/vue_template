@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n';
 
 import { defineComponent, ref } from 'vue';
-import { useTheme } from '/@/composables';
+import { useTheme } from '@/composables';
 
 export default defineComponent({
    name: 'Home',

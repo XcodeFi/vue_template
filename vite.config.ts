@@ -19,7 +19,7 @@ export default defineConfig({
   resolve: {
     alias: {
       // 'library': path.resolve(__dirname, './library'),
-      '/@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   plugins: [
