@@ -1,7 +1,6 @@
 import { createSSRApp } from 'vue';
 import App from './App.vue';
 import '@purge-icons/generated';
-import { createI18n } from 'vue-i18n';
 
 import ItNotification from 'library/components/notification';
 import ItProgressbar from 'library/components/progressbar';
@@ -23,12 +22,6 @@ import 'virtual:windi-utilities.css'
 // windicss devtools support (dev only)
 // import 'virtual:windi-devtools'
 
-//
-const i18n = createI18n({
-  locale: 'en',
-  // messages,
-});
-
 export function createApp() {
   const app = createSSRApp(App);
   const router = createRouter();
@@ -38,12 +31,23 @@ export function createApp() {
   app.config.globalProperties.$Notification = ItNotification;
 
   ItProgressbar.install(app);
+
+  // Loadingbar.loadingInstance = app;
+
   // app.config.globalProperties.$Loading = Loadingbar;
 
   ItTooltip.install(app);
 
   app.use(router);
-  app.use(i18n);
+
+  // install all modules under `modules/`
+  Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(app))
+
+  router.isReady().then(async () => {
+    const { registerSW } = await import('virtual:pwa-register')
+    registerSW({ immediate: true })
+  })
+
   app.use(head);
 
   return { app, router, head }

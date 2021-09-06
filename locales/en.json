@@ -1,8 +1,9 @@
 {
   "hello": "Hello",
-  "made_by": "Made by",
+  "made_by": "Made with love by Vue community",
   "toggle_language": "Toggle Language",
-  "welcome": "there, welcome to Vitesome",
+  "toggle_theme": "Toggle Theme",
+  "welcome": "there, welcome my template",
   "recomended-ide": "Recommended IDE setup",
   "See": "See",
   "more-info": "for more information.",

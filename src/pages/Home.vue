@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n';
 
 import { defineComponent, ref } from 'vue';
-import { useTheme } from '@/composables';
+import { useTheme } from '~/composables';
 
 export default defineComponent({
    name: 'Home',
@@ -71,16 +71,7 @@ export default defineComponent({
                ></a>
             </li>
          </ul>
-         <span class="text-xs"
-            >{{ t('made_by')
-            }}<a
-               class="footer-link text-cyan-400 hover:text-cyan-500"
-               href="https://github.com/alvarosaburido"
-               rel="noreferrer"
-               target="_blank"
-               >Alvaro Saburido</a
-            ></span
-         >
+         <span class="text-xs">{{ t('made_by') }}</span>
       </footer>
    </div>
 </template>

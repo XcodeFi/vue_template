@@ -6,6 +6,8 @@ const express = require('express')
 
 const isTest = process.env.NODE_ENV === 'test' || !!process.env.VITE_TEST_BUILD
 
+const { proxy, port } = require('./config/ssr.config');
+
 async function createServer(
   root = process.cwd(),
   isProd = process.env.NODE_ENV === 'production'
@@ -89,7 +91,7 @@ async function createServer(
       .replace('data-html-attrs', htmlAttrs)
       .replace('<!--head-tags-->', headTags)
       .replace('data-body-attrs', bodyAttrs)
-      .replace('<!--css-outlet-->', preloadLinks)
+      .replace('<!--preload-links-->', preloadLinks)
       .replace('<!--ssr-outlet-->', appHtml)
 
       let statusCode = 200;
@@ -113,8 +115,8 @@ async function createServer(
 if (!isTest) {
   createServer().then(({ app }) =>
     // @ts-ignore
-    app.listen(3000, () => {
-      console.log('http://localhost:3000')
+    app.listen(port, () => {
+      console.log(`http://localhost:${port}`)
     })
   )
 }

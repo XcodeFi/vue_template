@@ -4,17 +4,23 @@
       <meta charset="UTF-8" />
       <link rel="icon" href="/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00aba9" />
+      <meta name="msapplication-TileColor" content="#00aba9" />
+      <meta name="theme-color" content="#ffffff" />
       <link
          rel="stylesheet"
          href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
       />
-      <title>Vitesome</title>
-      <!--css-outlet-->
-       <!--preload-links-->
+      <!--head-tags-->
+      <!--preload-links-->
    </head>
-   <body>
+   <body data-body-attrs>
       <div id="app"><!--ssr-outlet--></div>
-      <script>/*sync-state-outlet*/</script>
+      <script>
+         /*sync-state-outlet*/
+      </script>
       <script type="module" src="/src/entry-client.ts"></script>
    </body>
 </html>
